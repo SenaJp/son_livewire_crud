@@ -22,3 +22,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::resource('books', App\Http\Controllers\BookController::class);
+
+});

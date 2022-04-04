@@ -15,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        return view('book.index');
     }
 
     /**
@@ -25,18 +25,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreBookRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreBookRequest $request)
-    {
-        //
+        return view('book.create');
     }
 
     /**
@@ -47,7 +36,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('book.show', compact('book'));
     }
 
     /**
@@ -58,29 +47,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view('book.edit', compact('book'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateBookRequest  $request
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateBookRequest $request, Book $book)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Book  $book
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Book $book)
-    {
-        //
-    }
 }
