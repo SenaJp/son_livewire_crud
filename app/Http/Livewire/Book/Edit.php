@@ -24,6 +24,7 @@ class Edit extends Component
     {
         $this->validate();
         $this->book->update($this->book->toArray());
+        session()->flash('message', 'Book updated successfully.');
         return redirect()->route('books.index');
     }
 

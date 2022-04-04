@@ -1,5 +1,12 @@
 <div>
     <div class="flex flex-col">
+        @if(session()->has('message'))
+            <div class="w-auto px-4 py-4 mb-4 bg-green-100 pointer-events-none">
+                <p class="text-sm text-2xl font-medium leading-5 text-green-700">
+                    {{ session()->get('message') }}
+                </p>
+            </div>
+        @endif
         <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
             <div class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
                 <table class="w-full">

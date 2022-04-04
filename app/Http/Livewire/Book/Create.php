@@ -25,6 +25,7 @@ class Create extends Component
     {
         $this->validate(); // Validate the form data
         Book::create($this->book->toArray());
+        session()->flash('message', 'Book created successfully.');
         return redirect()->route('books.index');
     }
 
