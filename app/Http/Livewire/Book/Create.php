@@ -21,9 +21,9 @@ class Create extends Component
         'book.author' => 'required|string',
     ];
 
-
     public function save()
     {
+        $this->validate(); // Validate the form data
         Book::create($this->book->toArray());
         return redirect()->route('books.index');
     }
