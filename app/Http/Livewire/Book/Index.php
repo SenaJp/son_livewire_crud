@@ -10,6 +10,12 @@ class Index extends Component
 {
     use WithPagination;
 
+    public function delete($id)
+    {
+        Book::whereId($id)->first()->delete();
+
+    }
+
     public function render()
     {
         return view('livewire.book.index', [
@@ -17,3 +23,4 @@ class Index extends Component
         ]);
     }
 }
+`

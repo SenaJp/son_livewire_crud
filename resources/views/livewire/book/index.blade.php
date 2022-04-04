@@ -47,7 +47,7 @@
                             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                                 <a href="{{ route('books.edit', ['book' => $book->id]) }}">Editar</a>
                                 <a href="{{ route('books.show', ['book' => $book->id]) }}">Ver</a>
-                                <a href="">Apagar</a>
+                                <button wire:click="delete('{{ $book->id }}')" onclick="return confirm ('Deseja apagar o livro {{ $book->title }}?') ||event.stopImmediatePropagation()">Apagar</button>
                             </td>
                         </tr>
                         @empty
