@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Book;
 
 use Livewire\Component;
+use App\Models\Book;
 
 class Show extends Component
 {
+    public $book;
 
-    public function mount(book $book)
+    public function mount(Book $book)
     {
         $this->book = $book;
     }
